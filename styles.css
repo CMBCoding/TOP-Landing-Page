@@ -6,3 +6,147 @@
 
 /* Visualizer CSS */
 
+li {
+    background-color: violet;
+    width: 100px;
+    list-style: none;
+    border: solid white 3px;
+    margin: 5px;
+}
+
+header {
+    display: flex;
+    /*This below is the key to mimicking this header bars layout
+    https://product-landing-page.freecodecamp.rocks/
+    */
+    justify-content:space-between; 
+    align-items: center;    
+    background-color: deeppink;
+    width: 100%;
+    top: 0; /*And this, it keeps the bar stuck to the top of the 
+    screen together with the position property*/
+    min-height: 60px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+}
+
+ul, li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: dimgray;
+}
+
+div {
+    background-color: blue;
+    border: solid black 3px;
+    margin: 5px;
+    padding: auto;
+}
+
+.top-section {
+    display: flex;
+    padding: 10px;
+}
+
+.top-img {
+    height: 200px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-section div {
+    padding: 8px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: crimson;
+    border: solid white 3px;
+}
+
+.profile {
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.profile-img {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline; */
+    height: 150px;
+    width: 150px;
+}
+
+.profile p {
+    padding: 10px;
+}
+
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.quote-section div {
+    padding: 20px;
+    margin: auto;
+}
+
+.quote {
+    text-align: center;
+}
+
+.citation {
+    text-align: right;
+}
+
+.sign-up-section {
+    background-color: orangered;
+}
+
+.sign-box {
+    display: flex;
+    flex-direction: row;
+    background-color: cadetblue;
+    width: 90%;
+    margin: 40px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: fuchsia;
+    min-height: 60px;
+}
