@@ -54,14 +54,28 @@ body {
 div {
     background-color: blue;
     border: solid black 3px;
-    margin: 5px;
-    padding: auto;
+    /* margin: 5px;
+    padding: auto; */
 }
 
 .top-section {
     display: flex;
     padding: 10px;
 }
+
+.rhombus {
+    margin: 10px 40px auto 30px;
+    transform: skewX(20deg);
+    box-shadow: 5px 5px crimson;
+    border-right: none;
+    border-bottom: none;
+    border-top: solid crimson 3px;
+    border-left: solid crimson 3px;
+}
+.rhombus > * {
+    transform: skewX(-20deg);
+}
+
 
 .top-img {
     height: 200px;
@@ -71,7 +85,7 @@ div {
 }
 
 .top-section div {
-    padding: 8px;
+    padding: 10px 20px;
 }
 
 .info-section {
