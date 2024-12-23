@@ -6,34 +6,35 @@
 
 /* Visualizer CSS */
 
+:root {
+    --bg-color-one: rgba(229,228,226,1);
+    --bg-color-two: rgba(255,255,255,1);
+    --crimson: #9E1B32;
+}
+
 li {
-    background-color: violet;
-    width: 100px;
+    width: 120px;
     list-style: none;
-    border: solid white 3px;
-    margin: 5px;
 }
 
 header {
     display: flex;
-    /*This below is the key to mimicking this header bars layout
-    https://product-landing-page.freecodecamp.rocks/
-    */
-    justify-content:space-between; 
+    justify-content: space-between; 
     align-items: center;    
-    background-color: deeppink;
+    background: linear-gradient(90deg, var(--bg-color-one) 0%, var(--bg-color-two) 30%);
     width: 100%;
-    top: 0; /*And this, it keeps the bar stuck to the top of the 
-    screen together with the position property*/
-    min-height: 60px;
+    border-bottom: solid var(--crimson) 1px;;
+    min-height: 50px;
 }
 
 .logo {
-    width: 50px;
     height: 50px;
-    justify-content: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
+/* Links and Navbar Stylings */
 ul, li {
     display: flex;
     align-items: center;
@@ -42,8 +43,41 @@ ul, li {
 
 a {
     text-decoration: none;
+    font-weight: bold;
+    color: var(--crimson);
 }
 
+
+.header-link {
+    background: linear-gradient(90deg, var(--bg-color-one) 0%, var(--bg-color-two) 30%);
+    margin: 8px 30px 8px 30px;
+    padding: 4px 10px;
+    transform: skewX(20deg);
+    box-shadow: 3px 3px var(--crimson);
+    border-right: none;
+    border-bottom: none;
+    border-top: solid var(--crimson) 3px;
+    border-left: solid var(--crimson) 3px;
+}
+
+.header-link > * {
+    transform: skewX(-20deg); /* Unskew */
+}
+
+.header-link:hover {
+    transform: skewX(20deg);
+    box-shadow: 3px 3px var(--crimson);
+    border-right: solid var(--bg-color-one) 3px;
+    border-bottom: solid var(--bg-color-one) 3px;
+    border-top: none;
+    border-left: none;
+    background: black;
+}
+
+.header-link:hover > * {
+    font-style: italic;
+    color: white;
+}
 
 body {
     display: flex;
@@ -60,32 +94,77 @@ div {
 
 .top-section {
     display: flex;
+    justify-content: space-evenly;
     padding: 10px;
+    flex-direction: row;
+    align-items: center;
 }
 
 .rhombus {
-    margin: 10px 40px auto 30px;
+    height: min-content;
+    width: 45%;
+    min-width: 380px;
+    background: linear-gradient(90deg, var(--bg-color-one) 0%, var(--bg-color-two) 30%);
+    /* margin: 30px 40px; */
     transform: skewX(20deg);
-    box-shadow: 5px 5px crimson;
+    box-shadow: 5px 5px var(--crimson);
     border-right: none;
     border-bottom: none;
-    border-top: solid crimson 3px;
-    border-left: solid crimson 3px;
+    border-top: solid var(--crimson) 3px;
+    border-left: solid var(--crimson) 3px;
 }
 .rhombus > * {
-    transform: skewX(-20deg);
+    transform: skewX(-20deg); /* Unskew */
+    text-wrap: wrap;
 }
 
+.rhombus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: black;
+    margin: 5px 5px 5px 5px;
+    transform: skewX(5deg);
+    box-shadow: 5px 5px var(--crimson);
+    border-right: none;
+    border-bottom: none;
+    border-top: solid var(--crimson) 3px;
+    border-left: solid var(--crimson) 3px;
+}
+
+button {
+    padding: 4px 20px;
+    margin: 0px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
 
 .top-img {
+    display: flex;
     height: 200px;
-    width: 800px;
+    width: 200px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(20deg) 
+}
+
+.top-img img {
+    width: 100%;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .top-section div {
     padding: 10px 20px;
+    margin: auto inherit;
 }
 
 .info-section {
